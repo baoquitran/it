@@ -1,0 +1,230 @@
+/* Main style sheet for all of the page in the website */
+
+/* import font */
+
+@import url('https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
+/* font awesome */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css');
+
+
+/* base css */
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+  color: #898989;
+	font-size: 15px;
+	font-family: 'Raleway', sans-serif;
+	line-height: normal;
+	font-weight: 400;
+}
+a{
+  text-decoration: none;
+  color: #333;
+}
+ul{
+  list-style: none;
+}
+.container{
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+}
+.padding-section{
+  padding-top: 120px;
+  padding-bottom: 115px;
+}
+
+
+
+/* header */
+
+/* header top */
+.header-top{
+  background: #039ee3;
+  color:#fff;
+}
+.header-top a{
+  color:#fff;
+}
+.header-top .container {
+  height: 50px;
+  align-items: center;
+  justify-content: space-between;
+}
+.left-info, .right-nav{
+  display: flex;
+}
+.left-info{
+  flex:5;
+}
+.right-nav, .make-appoint{
+  flex: 1;
+}
+.left-info p {
+  padding-right: 20px;
+}
+.left-info i {
+  padding-right: 5px;
+}
+.right-nav ul, .main-nav ul{
+  display: flex;
+}
+.right-nav ul li {
+  padding-right: 10px;
+}
+.make-appoint a{
+  background: #fff;
+  color:#000;
+  padding: 16px 18px 15.5px 18px;
+  text-align: center;
+  font-weight: 600;
+  transition: background .6s;
+}
+.make-appoint a:hover{
+  background: #000;
+  color:#fff;
+}
+
+
+/* header bottom */
+.header-bottom .container{
+  height: 118px;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo img{
+  height:80px;
+}
+.main-nav>ul>li {
+  padding: 35px 30px 35px 0;
+  font-size: 15px;
+  text-transform: uppercase;
+}
+.main-nav ul li:last-child {
+  padding-right: 0;
+}
+.main-nav ul li a{
+  font-weight: 600;
+}
+.main-nav>ul>li:hover>a{
+  color:#039ee3;
+}
+
+/* sub-menu */
+.drop-down{
+  position: relative;
+}
+ul.sub-menu{
+  width: 230px;
+  top: 70px;
+  position: absolute;
+  display: block;
+  visibility: hidden;
+  border-top: 2px solid #039ee3;
+  box-shadow: 0 5px 35px -18px #000;
+
+}
+.sub-menu li{
+  display: list-item;
+}
+.sub-menu li:hover a{
+  background-color: #039ee3;
+  color:#fff;
+}
+.sub-menu li a{
+  display: list-item;
+  padding: 15px;
+  font-size: 13px;
+  color: #666;
+  background-color: #fff;
+  border-top: 1px solid #6666665e;
+  font-weight: 500;
+}
+.drop-down:hover ul.sub-menu{
+  visibility: visible;
+}
+
+/* slider */
+
+.slider{
+  width: 100%;
+  height: 700px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background:
+  linear-gradient(
+      rgba(0, 0, 0, 0.25),
+      rgba(0, 0, 0, 0.5)
+    ),
+  url('/images/it_service/home_01.png') no-repeat center top;
+  text-align: center;
+  color:rgba(255,255,255,1.00);
+}
+.slider .content{
+  position: relative;
+  z-index: 1000;
+}
+.slider .content h1{
+  font-size: 70px;
+  font-family: Raleway;
+}
+.slider .content::before{
+  background: #039ee3;
+  height: 140px;
+  width: 500px;
+  content: "";
+  display: block;
+  position: absolute;
+  left: 35px;
+  top:-15px;
+  z-index: -1;
+}
+
+/* page title */
+
+.title-content{
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.title-content p{
+  font-size: 20px;
+  margin: 15px 0 20px 0;
+  line-height: 21px;
+}
+.title-content h2{
+  font-size: 35px;
+  color:#000;
+  line-height: 36px;
+  text-transform: uppercase;
+}
+.title-content span{
+  display: block;
+  content:"";
+  width: 100px;
+  height: 5px;
+  background: #039ee3;
+}
+
+/* why choose us */
+.why-items{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: center;
+  grid-gap: 30px;
+  text-align: center;
+}
+.why-item img{
+  width: 100px;
+}
+.why-item h3{
+  color:#000;
+  font-size: 18px;
+  margin: 30px 0 20px 0;
+}
